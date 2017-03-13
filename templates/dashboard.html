@@ -11,8 +11,8 @@
     </div>
 
     <div class="dashboard-menu">
-        <div class="dashboard-box longAnimated slideInUp" ng-repeat="option in data" ng-click="handleAction(option)">
-            <img class="dashboard-img" ng-src="{{option.resource}}">
+        <div class="dashboard-box longAnimated slideInUp" ng-repeat="option in data">
+            <img class="dashboard-img" ng-src="{{option.resource}}" ng-click="handleAction(option)">
             <h2> {{option.title | translate}} </h2>
         </div>
     </div>
