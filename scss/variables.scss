@@ -42,10 +42,10 @@ $login-background: 'resources/7_BG/componente-71.png';
 $login-box-margin: 20px; 
 $login-box-position-top: 4vh; 
 $login-box-background: rgba(255, 255, 255, 0.5);
-$login-logo-padding: 50px 25px 20px 45px; 
+$login-logo-padding: 70px 55px 20px 45px; 
 
 //Headers
-$header-color:$main-color;
+$header-color:black;
 $header-title-color: white;
 $header-background-color: $secondary-color;
 
@@ -55,7 +55,7 @@ $menu-selected-border-width: 6px;
 $menu-backdrop-color: rgba(0, 0, 0, 0.4);
 $menu-header-font-color: white; 
 $menu-internal-header-font-color: white; 
-$menu-internal-header-color:$main-color;
+$menu-internal-header-color:black;
 $menu-internal-header-title-color: white; 
 $menu-background-color: $main-color;
 $menu-option-padding: 5px; 
@@ -90,7 +90,7 @@ $calendar-container-background: rgba(255, 255, 255, 0.8);
 
 //Common CSS
 
-$default-background:'resources/7_BG/componente-72.png';
+$default-background:'resources/7_BG/componente-75.png';
 
 $container-round-corner: 8px; 
 $main-container-padding: 5px 12px; 

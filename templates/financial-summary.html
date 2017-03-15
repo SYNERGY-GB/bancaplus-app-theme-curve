@@ -3,8 +3,8 @@
     <ion-content>
     	
     	<div class="padding" id="welcomeMsg">
-	        <b> <p class="text-right">{{'financial_summary_welcome' | translate }}: {{::data.user.title }} 
-	        					  {{::data.user.firstName}} {{::data.user.lastName}} </p> </b>
+	        <p class="text-right">{{'financial_summary_welcome' | translate }}: {{::data.user.title }} 
+	        					  {{::data.user.firstName}} {{::data.user.lastName}} </p>
 	        <p class="text-right">{{'financial_summary_last_connection' | translate}}: {{::data.user.lastSession.displayDate}} </p>
 	        <p class="text-right" ng-if="data.user.lastSessionChannel">
 	        		{{'financial_summary_channel' | translate}}: {{data.user.lastSessionChannel}}  
@@ -33,7 +33,7 @@
 						</div>
 
 						<!-- second column -->
-						<p class="account col col-33 col-center"> 
+						<p class="account col col-40 col-center"> 
 							{{::instrument.name}} 
 							<span ng-if="!(instrument.category =='claims')">
 								{{::instrument.maskedAccountNumber | limitTo: -7}}
@@ -41,7 +41,7 @@
 						</p>
 
 						<!-- third column -->
-						<div class="col col-50 col-center text-right">
+						<div class="col col-33 col-center text-right">
 							<p class="amount" ng-if="(instrument.category =='checkingAccounts' || 
 													 						 instrument.category == 'savingAccounts'  || 
 													 						 instrument.category =='creditCards') && 
@@ -96,8 +96,8 @@
 				</div>
 				</div>
 				<!-- Accounts total amount -->
-				<div style = "border-radius:30px;" class="row instrument totalAmount" ng-if="section.total">
-					<div class="col col-90 text-right">
+				<div style = "border-radius:30px; height:30px;width:100%;" class="row instrument totalAmount" ng-if="section.total">
+					<div style="margin-top: -10px;" class="col col-90 text-right">
 						<span id="label">{{'total' | translate}}:</span> 
 						<span class="amount"> {{section.total.displayAmount}} </span>
 					</div>

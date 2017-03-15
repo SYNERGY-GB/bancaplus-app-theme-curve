@@ -40,7 +40,7 @@ p {
 		}
 	}
 	&#color {
-		color: $header-color; 
+		color: $main-color; 
 		font-weight: bold; 
 	}
 }
@@ -66,11 +66,12 @@ h3.sectionTitle {
 
 .sectionTitle {
 	border-radius:30px;
-	border:2px solid white;
+	border:1px solid white;
 	background-color: transparent; 
 	color: $section-title-font-color;
 	font-weight: bold;
 	text-align:center;
+	height:30px;
 	padding: 10px;
 	&.item { 
 		border:0; 
@@ -224,10 +225,11 @@ ion-side-menu {
 		&.activated {
 			background-color: $instrument-activated-color;
 			p, i.icon {
-				color: $header-color; 
+				color: $main-color; 
 			}
 		}
 		padding: 10px 7px; 
+		font-weight:bold;
 		
 		.col-10:first-child {
 			padding-left:0;
@@ -274,11 +276,18 @@ ion-side-menu {
 	&#selection .activated {
 		background-color: $instrument-activated-color; 
 		p, i.icon {
-			color: $header-color; 
-			font-size:11px;
+			color: $main-color; 
+			font-size:10px;
 		}
 
 	}
+}
+
+.account{
+	margin-left:14px;
+	font-size:12px;
+	font-weight:bold;
+
 }
 
 .list#confirm {
@@ -455,8 +464,8 @@ input:-ms-input-placeholder { /* IE10+ */
 
 
 .checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
-  background: $header-color !important; 
-  border-color: $header-color !important;
+  background: $main-color !important; 
+  border-color: $main-color !important;
 }
 
 .checkbox-icon:after {
@@ -466,7 +475,7 @@ input:-ms-input-placeholder { /* IE10+ */
 }
 
 .ion-ios-checkmark-outline, .ion-android-checkbox-outline {
-	color: $header-color;
+	color: $main-color;
 }
 
 .no-padding {
