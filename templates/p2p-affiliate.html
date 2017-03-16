@@ -1,0 +1,82 @@
+<ion-view mz-screen cache-view="false">
+    <ion-nav-title>{{params.title | translate }}</ion-nav-title>
+    <ion-content>
+    	<div ng-if="data.length>0">
+    		<form novalidate name="affiliateForm" autocomplete="off">
+		        <div class="mainContainer">
+		            <div class="sectionTitle">
+		            	<h3> {{'transfer_account_origin' | translate}} </h3>
+		            </div>
+		            <div id="accounts" class="secondaryContainer">
+		                <div ng-repeat="instrument in data">
+		                	<ion-radio ng-model="sendData.instrument"
+		                			   ng-value="instrument" required>
+				    			<div class="row">
+									<div class="col grow"> 
+										{{::instrument.name | limitTo: 14}} {{::instrument.maskedAccountNumber | limitTo: -7}} 
+									</div>
+								</div>
+					    	</ion-radio> 
+		                    <hr ng-if="$index<data.length-1"/>
+		                </div>
+		            </div>
+		        </div>
+
+		        <!-- Phone Input -->
+		        <div class="mainContainer">
+		            <div class="sectionTitle">
+		            	<h3> {{'phone' | translate}} </h3>
+		            </div>
+		            <div class="secondaryContainer">
+		        		<div class="item-input app-input"> 
+	                        <input  type="tel" 
+	                                data-ng-model="sendData.phone" 
+	                                name="affiliate_phone" 
+	                                required
+	                                placeholder="{{'p2p_transfer_number_placeholder' | translate}}"
+	                                autocomplete="off"
+	                                autocapitalize="none"
+	                                ng-disabled="true" />
+	                    </div>
+		            </div>
+		        </div>
+
+		        <!-- Email Input -->
+		        <div class="mainContainer">
+		            <div class="sectionTitle">
+		            	<h3> {{'email' | translate}} </h3>
+		            </div>
+		            <div class="secondaryContainer">
+		        		<div class="item-input app-input"> 
+	                        <input  type="email" 
+	                                data-ng-model="sendData.email" 
+	                                name="affiliate_phone" 
+	                                required
+	                                placeholder="{{'p2p_transfer_email_placeholder' | translate}}"
+	                                autocomplete="off"
+	                                autocapitalize="none" />
+	                    </div>
+		            </div>
+		        </div>
+
+		        <!-- Button Next -->
+		        <div class="text-center padding-top">
+				    <button class="app-input button" ng-disabled="affiliateForm.$invalid" 
+				    		ng-click="goTo()">
+				        <p>{{'accept' | translate}} </p>
+				    </button>
+				</div>
+			</form>
+		</div>
+
+		<!-- Button Go Back -->
+        <div ng-if="data.length==0">
+            <h4 class="padding text-center">{{'p2p_no_source_instruments' | translate}} </h4>
+            <div class="padding text-center">
+                <button class="app-input button" ng-click="goBack()">
+                    <p>{{'go_back' | translate}} </p>
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
