@@ -20,45 +20,33 @@
 	}
 
 	.sectionTitle {
-		padding:5px; 
+ 
 		h3 {
 			margin:0;
 			font-size:$section-title-font-size;
 			color:white;
-			text-align:center;
 			font-weight:bold;
 		}
 
 		img{
 			display:none;
 		}
+		.totalAmount {
+			margin-left:54%;
+			font-size:17px;
+			position:fixed;
+		}
+
 
 	}
-	
-
-	.row instrument {
-
-	totalAmount{
-		border-radius:30px;
-	}
-	}
-
 
 	.ion-forward {
 		color: $app-default-button-color;
 	}
 
 	.totalAmount {
-		background-color: $app-default-button-color;
-		.amount, #label {
-			color: white;
-		}
-		#label {
-			margin-right: 5px;
-		}
-		span.amount {
-		   font-size: 18px;
-		   font-weight:bold;
-		}
+		padding-right:10%;
+		font-size:20px;
+		position:fixed;
 	}
 }

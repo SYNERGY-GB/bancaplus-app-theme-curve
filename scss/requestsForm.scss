@@ -13,8 +13,9 @@
 		padding-right: 0;
 	}
 
-	sectionTitle{
+	.sectionTitle{
 		text-align:center;
+
 	}
 	.no-padding-but-right {
 		padding-top: 0;
@@ -34,10 +35,12 @@
 	.item p {
 		color: $app-default-font-color;
 		font-size: 13px;
+
 	}
 	
 	#info {
 		background-color: #F2F2F2;
+
 
 		.item-icon-left {
 			background: none;
@@ -55,20 +58,27 @@
 
 		&:first-child {
 			margin-top:10px; 
+
 		}
 	} 
 
  	.schemaForm form {
+
 		.form-group {
 			padding: 0;
+
 		}
 
 		select {
 			padding-left: 10px;
+
 		}
 
 		.item.item-input {
     		padding: 10px;
+    		border:0;
+    		border-bottom: 1px solid white;
+    		background-color:transparent;
  		}
  	}
 } 

@@ -3,8 +3,17 @@
 	background: url($default-background) no-repeat center;
 	background-size: 105%;
 
-	h3{
+	.item-input-wrapper {
+		border: 1px solid $container-border-color;
+		background: white;
+		border-radius: 30px;
+		.text{
+			color: gray;
+		}
+	}
 
+	.ion-search {
+		color: $main-color;
 	}
 
 	h4 {
@@ -17,11 +26,12 @@
 
 	.item-content {
 		white-space: normal;
+
 	}
 
 	.sectionTitle {
 		border:2px solid white;
-		background-color: transparent;
+		background-color: $main-color;
 		h3{
 			font-size:$section-title-font-size;
 		}

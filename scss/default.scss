@@ -47,7 +47,6 @@ p {
 
 h3.sectionTitle {
 
-	margin:0;
 	font-size:$app-default-item-h3-size;
 	color:white;
 	text-align:center;
@@ -66,13 +65,13 @@ h3.sectionTitle {
 
 .sectionTitle {
 	border-radius:30px;
-	border:1px solid white;
-	background-color: transparent; 
+	border:2px solid white;
+	background-color: $main-color; 
 	color: $section-title-font-color;
 	font-weight: bold;
-	text-align:center;
-	height:30px;
 	padding: 10px;
+	text-align:center;
+	height:40px;
 	&.item { 
 		border:0; 
 		background-color: $section-title-background-color; 
@@ -81,8 +80,7 @@ h3.sectionTitle {
 			font-size: $section-title-icon-size;
 		}
 	}
-	h3 {
-		margin-bottom:0; 
+	h3 { 
 		font-size:$section-title-font-size; 
 		color: $section-title-font-color;
 		font-weight:bold;
@@ -100,7 +98,7 @@ h3.sectionTitle {
 	border-top: none;
 	border-left: none;
 	border-right: none;
-	//border-bottom: 3px solid $header-background-color;
+	border-bottom:none;
 	button i.icon {
 		color:$header-title-color; 
 	}
@@ -147,8 +145,9 @@ ion-side-menu {
 	
 	.bar.bar-header {
 		background-color: $menu-internal-header-color;
-		.title {
-			color:$menu-internal-header-title-color; 
+		.title{
+			color:$menu-internal-header-title-color;
+			font-size:18px; 
 		}
 	}
 
@@ -165,6 +164,7 @@ ion-side-menu {
 				margin-left: 35px; 
 			}
 		}
+
 	}
 
 	.row {
@@ -172,11 +172,10 @@ ion-side-menu {
 			color: white;
 		}
 		&.activated {
-
 		}
 		height:$menu-option-height; 
 		padding:$menu-option-padding; 
-		background: $menu-background-color;
+		background: transparent;
 	}
 
 	hr {
@@ -189,12 +188,17 @@ ion-side-menu {
 	}
 
 	.currentMenuOption {
-		border-right: $menu-selected-border-width solid white; 
+		background-color:black;
+		border-right: $menu-selected-border-width solid $secondary-color; 
 	}
 
 	.row:not(.currentMenuOption) {
 		padding-right:  $menu-selected-border-width + 5px; 
 	}
+}
+
+aboutMain{
+	background-color:$main-color;
 }
 
 
@@ -229,7 +233,7 @@ ion-side-menu {
 			}
 		}
 		padding: 10px 7px; 
-		font-weight:bold;
+
 		
 		.col-10:first-child {
 			padding-left:0;
@@ -285,9 +289,7 @@ ion-side-menu {
 
 .account{
 	margin-left:14px;
-	font-size:12px;
-	font-weight:bold;
-
+	font-size:15px;
 }
 
 .list#confirm {
@@ -351,9 +353,11 @@ ion-side-menu {
 }
 
 .app-input  {
-	margin-right: 8px;
-    margin-left: 8px;
- 	border: 0; 
+	margin-top:20px;
+	margin-bottom:20px;
+    width:80%;
+    height:90%;
+ 	border: 2px solid white; 
 	background-color:$app-default-button-color; 
 	border-radius: $button-round-corner; 
 	p {
@@ -363,12 +367,27 @@ ion-side-menu {
 	} 
 	&.activated {
 		border: none; 
- 		background-color: $main-color; 
+ 		background-color: $secondary-color; 
 	}
 }
 
 button.app-input {
-	min-width: 40vw;
+	background-color:$app-default-button-color;
+	border:1px solid white;
+	border-radius:30px;
+	width:80%;
+	height:55px;
+	margin-top:25px;
+	p{
+		color: white;
+	}
+	&.activated {
+		border: none; 
+ 		background-color: $app-default-button-activated-color;
+ 		p{
+			color: $main-color;
+		}
+	}
 }
 
 .fix-content-bottom {
@@ -528,7 +547,8 @@ input:-ms-input-placeholder { /* IE10+ */
 
 	div#copyright p {
 		margin-bottom:2px; 
-		color: black; 
+		color: white; 
+		background-color: url($default-background) no-repeat center;
 		&.app-name {
 			color: $main-color;
 		}
@@ -536,6 +556,7 @@ input:-ms-input-placeholder { /* IE10+ */
 
 	.row.copyrightRow {
 		padding-top: 0;
+		background-color:$main-color;
 		.col {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -544,16 +565,19 @@ input:-ms-input-placeholder { /* IE10+ */
 
 	.secondaryContainer #copyright { 
 		padding-bottom: 0;
+		border-radius:10px;
 	}
 
 	button#copyrightButton {
-		border-radius: 0;
-		background-color: $header-background-color;
-		color: white;
+		border-radius: 30px;
+		background-color: transparent;
+		border:1px solid white;
+		color: $modal-button-text-color;
+		font-weight: bold;
 		&.activated {
 			border: none; 
- 			background-color: $main-color;
- 			color: white;
+ 			background-color: $secondary-color;
+ 			color: $main-color;
 		}
 	}
 
@@ -567,9 +591,15 @@ input:-ms-input-placeholder { /* IE10+ */
 	}
 
 	.secondaryContainer {
-		border:0; 
-		background-color:$app-default-modal-background; 
+		border:0;
+		border-radius:20px; 
+		background:url($default-background) no-repeat center;
 		box-shadow: none; 
+	}
+
+	.sectionTitle{
+		border:0;
+		background-color:transparent;
 	}
 
 	.sectionTitle .icon {
@@ -578,6 +608,7 @@ input:-ms-input-placeholder { /* IE10+ */
 
 	h3.sectionTitle {
 		text-align: center;
+		font-size: 15px;
 	}
 
 	hr {		
@@ -617,8 +648,8 @@ input:-ms-input-placeholder { /* IE10+ */
 				height:45px; 
 				&:first-child {
 					border:1px solid $main-color; 
-					color: $main-color; 
-					background-color: white; 
+					color: white; 
+					background-color: tranparent; 
 					&.activated {
 						color: white; 
 						background-color: $main-color; 
@@ -643,7 +674,7 @@ input:-ms-input-placeholder { /* IE10+ */
 }
 
 .active .modal-backdrop-bg {
-    opacity: 0.75;
+    opacity: 0.90;
 }
 
 //Popup CSS
@@ -768,6 +799,7 @@ label i.icon.ion-search {
 //Schema Form CSS
 
 .schemaForm {
+	background-color:transparent;
 
 	&.secondaryContainer {
 		padding-top:5px;

@@ -18,7 +18,7 @@
 		    	<div class="mainContainer">
 		    		<div class="sectionTitle item item-icon-right" ng-class="{'addBorder' : !section.toggle}"
 		    		     ng-click="toggle($index)">
-		    			<h3> {{::section.displayName}} </h3>
+		    			<h3 class="col-center"> {{::section.displayName}} </h3>
 		    			<i class="icon" 
 		    			   ng-class="{ 'ion-chevron-up' : section.toggle, 'ion-chevron-down' : !section.toggle}"></i>
 		    		</div>
@@ -49,10 +49,10 @@
 		    		<div ng-repeat="beneficiary in section.data" ng-show="beneficiary.model">
 				    	<div class="item item-icon-left">
 				    		<div class="row">
-					    		<h3> 
+					    		<h3 class="col color1"> 
 					    			{{::beneficiary.instrument.displayName}} 
 					    		</h3>
-					    		<h3 class="col"> 
+					    		<h3  class="col color1"> 
 					    			{{::beneficiary.instrument.maskedAccountNumber | limitTo: -7}} 
 					    		</h3>
 				    		</div>

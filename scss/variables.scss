@@ -4,7 +4,7 @@ $ionicons-font-path: 'lib/ionic/release/fonts';
 
 //Main Colors
 $main-color: #18415e;
-$secondary-color: #18415e;
+$secondary-color: white;
 $activated-gray: #ADADAD;
 
 //App header dashboard
@@ -38,30 +38,32 @@ $contact-title-color:$main-color;
 
 //Login screen
 
-$login-background: 'resources/7_BG/componente-71.png';
+$login-background: 'resources/7_BG/componente-70.png';
 $login-box-margin: 20px; 
 $login-box-position-top: 4vh; 
 $login-box-background: rgba(255, 255, 255, 0.5);
-$login-logo-padding: 70px 55px 20px 45px; 
+$login-logo-padding: 80px 65px 20px 55px; 
 
 //Headers
-$header-color:black;
+$header-color:transparent;
 $header-title-color: white;
 $header-background-color: $secondary-color;
 
 //Side Menu
+$default-background:'resources/7_BG/componente-75.png';
 
-$menu-selected-border-width: 6px; 
+
+$menu-selected-border-width: 5px; 
 $menu-backdrop-color: rgba(0, 0, 0, 0.4);
 $menu-header-font-color: white; 
 $menu-internal-header-font-color: white; 
-$menu-internal-header-color:black;
+$menu-internal-header-color:transparent;
 $menu-internal-header-title-color: white; 
-$menu-background-color: $main-color;
-$menu-option-padding: 5px; 
-$menu-option-separator-margin: 15px; 
+$menu-background-color: url($default-background) no-repeat center;
+$menu-option-padding: 10px; 
+$menu-option-separator-margin: 20px; 
 $menu-option-color: white; 
-$menu-option-height: 50px; 
+$menu-option-height: 65px; 
 
 //Financial Summary screen
 
@@ -103,7 +105,7 @@ $secondary-container-item-background-color: rgba(255, 255, 255, 0);
 $modal-button-text-color: $secondary-color;
 
 $section-title-background-color:$main-color; 
-$section-title-font-size: 13px; 
+$section-title-font-size: 15px; 
 $section-title-font-color: white;
 $section-title-icon-size: 16px;
 $section-title-modal-icon-size:21px;   
@@ -124,10 +126,10 @@ $app-default-separator-margin: 0 10px;
 $app-default-spinner-color: #D9DEE4; 
 $app-default-spinner-size: 50px; 
 $app-default-select-text-color: white; 
-$app-default-modal-background: white;
+$app-default-modal-background: $main-color;
 $app-default-background-color: white; 
-$app-default-button-color: $secondary-color;  
-$app-default-button-activated-color: $activated-gray;  
+$app-default-button-color: transparent;  
+$app-default-button-activated-color: white;  
 $app-default-backdrop-color: rgba(0, 0, 0, 0.65); 
 $app-default-header-icon-size: 20px;  
 $app-default-button-text-size: 18px; 
@@ -140,12 +142,12 @@ $button-round-corner: 30px;
 $input-height: 50px;   
 $input-border-color: #C5CEC7;
 $text-color: #565A57; 
-$button-text-color: white; 
+$button-text-color: $main-color; 
 
 $icon-color: white;
 $icon-size: 16px; 
 
-$placeholder-color: white !important; 
+$placeholder-color: gray !important; 
 
 $popover-hr-color: #387EF5;
 $popup-activated-color: $activated-gray; 

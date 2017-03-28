@@ -5,11 +5,16 @@ background-size: 105%;
 
 .item-input-wrapper {
 	border: 1px solid $container-border-color;
-	background: $secondary-container-background-color;
-	border-radius: 0px;
+	background: white;
+	border-radius: 30px;
+	.text{
+		color: gray;
+	}
 }
 
 .ion-search {
-	color: $header-color;
+	color: $main-color;
 }
+
+
 }

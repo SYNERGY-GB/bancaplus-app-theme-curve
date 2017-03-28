@@ -3,11 +3,10 @@
         {{title}}
     </ion-nav-title>
     <ion-content>
-        <img ng-src="{{params.bannerURL}}" on-error-src="{{params.banner}}" 
-             id="banner"/>
+       <img ng-src="{{params.banner}}" id="banner">
         <div class="mainContainer">
             <div class=" item item-select" id="selectRound">
-                <select ng-options="instrument as (instrument.name | limitTo: 22) + ' ' + (instrument.category == 'claims' ? '' : instrument.maskedAccountNumber | limitTo: -7)
+                <select ng-options="instrument as (instrument.name | limitTo: 22) + '  ' + (instrument.category == 'claims' ? '' : instrument.maskedAccountNumber | limitTo: -7)
                                     for instrument in searchableInstruments"
                         ng-change="instrumentChanged(instrumentSelected)" ng-model="instrumentSelected"
                         class="truncate">
@@ -40,7 +39,7 @@
             </div>
 
             <div class="text-center padding" ng-if="instrumentDetail.instrument.payable && !instrumentDetail.instrument.payer">
-                <button type="button" ng-click="transferAsDestination()" class="button app-input icon-left">
+                <button type="button" ng-click="transferAsDestination()" class="app-input button">
                     {{'pay' | translate}}
                 </button>
             </div>

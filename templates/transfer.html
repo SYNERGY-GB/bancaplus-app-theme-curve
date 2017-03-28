@@ -12,7 +12,7 @@
         </div>
         <div class="mainContainer" ng-if="data.length>0">
             <div class="sectionTitle">
-            	<h3> {{'transfer_account_origin' | translate}} </h3>
+            	<h3 class="col-center"> {{'transfer_account_origin' | translate}} </h3>
             </div>
             <div id="accounts" class="secondaryContainer animated fadeIn">
                 <div ng-repeat="instrument in data | filter:search:strict">
@@ -21,7 +21,7 @@
                             <img ng-src="{{params.checkingIcon}}" />
                         </div>
             			<p class="col col-center account"> 
-                            {{::instrument.name | limitTo: 14}} {{::instrument.maskedAccountNumber | limitTo: -7}}
+                         {{::instrument.maskedAccountNumber | limitTo: -7}}
                         </p>	
             			<p class="col col-50 col-center text-right amount" 
                            ng-repeat="available in instrument.available" 

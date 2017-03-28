@@ -14,7 +14,9 @@
 		<div class="mainContainer" ng-repeat="section in transformedData" ng-if="section.data && section.data.length>0">
 			<div class="sectionTitle row">
 				<img class="col-10 col-center" ng-src="{{params.sectionIcon}}"/>
-				<h3 class="col col-center"> {{::section.displayName}} </h3>
+				<h3 class="col-center"> {{::section.displayName}} </h3>
+				<h3 ng-if="section.total.displayAmount !== undefined" class="totalAmount"> {{section.total.displayAmount}} </h3>
+				<h3 ng-if="section.total.displayAmount == undefined && !(section.id == 'creditCards') && !(section.id == 'credits')" class="totalAmount"> {{section.data[0].available[0].displayAmount}} </h3>
 			</div>
 			<div class="secondaryContainer">
 				<!-- instrument -->
@@ -28,16 +30,19 @@
 							<img ng-src="{{params.checkingIcon}}" ng-switch-when="checkingAccounts"/>
 							<img ng-src="{{params.savingIcon}}" ng-switch-when="savingAccounts"/>
 							<img ng-src="{{params.creditIcon}}" ng-switch-when="credits"/>
-							<img ng-src="{{params.claimsIcon}}" ng-switch-when="claims"/>
+							<img ng-src="{{params.defaultIcon}}" ng-switch-when="claims"/>
 							<img ng-src="{{params.defaultIcon}}" ng-switch-default />
 						</div>
 
 						<!-- second column -->
 						<p class="account col col-40 col-center"> 
-							{{::instrument.name}} 
+
 							<span ng-if="!(instrument.category =='claims')">
 								{{::instrument.maskedAccountNumber | limitTo: -7}}
 							</span>
+							<span ng-if="(instrument.category =='claims') || (instrument.category =='credits') || instrument.maskedAccountNumber == undefined">
+								{{::instrument.name}} 
+							</span>								
 						</p>
 
 						<!-- third column -->
@@ -95,13 +100,14 @@
 					<hr ng-if="$index<section.data.length-1"/>	
 				</div>
 				</div>
-				<!-- Accounts total amount -->
-				<div style = "border-radius:30px; height:30px;width:100%;" class="row instrument totalAmount" ng-if="section.total">
-					<div style="margin-top: -10px;" class="col col-90 text-right">
+				<!-- Accounts total amount
+				<div class="row instrument totalAmount" ng-if="section.total">
+					<div  class="col col-90 text-right result">
 						<span id="label">{{'total' | translate}}:</span> 
 						<span class="amount"> {{section.total.displayAmount}} </span>
 					</div>
 				</div>
+				 -->
 			
 			</div>
 
