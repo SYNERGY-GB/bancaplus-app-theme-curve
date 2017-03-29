@@ -5,6 +5,7 @@
 	
 	.no-padding {
 		padding: 0;
+		color:white;
 	}
 
 	.no-padding-but-left {
@@ -67,10 +68,13 @@
 		.form-group {
 			padding: 0;
 
+
 		}
 
 		select {
 			padding-left: 10px;
+			background-color:transparent;
+
 
 		}
 
@@ -79,6 +83,7 @@
     		border:0;
     		border-bottom: 1px solid white;
     		background-color:transparent;
+
  		}
  	}
 } 

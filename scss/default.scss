@@ -802,11 +802,13 @@ label i.icon.ion-search {
 	background-color:transparent;
 
 	&.secondaryContainer {
+
 		padding-top:5px;
 	}
 
 	form {
-    	padding: 0px 1px 10px 1px; 
+    	padding: 0px 1px 10px 1px;
+
 
     	fieldset, legend {
     		border: none; 
@@ -818,7 +820,7 @@ label i.icon.ion-search {
 		}
 
 		span.sr-only, .help-block, span.form-control-feedback, span.form-control-feedback + span {
-			display:none 
+			display:none;
 		}
 
 		select {
@@ -827,11 +829,11 @@ label i.icon.ion-search {
 		}
 
 		label.input-select, select, .item.item-select {
-			//color: $text-color; 
+			color: $app-default-font-color; 
 		}
 
 		input[type="text"]::-webkit-input-placeholder {
-  			color: gray  !important;	
+  			color: white   !important;	
 		}
 
 		.sectionTitle.control-label {
@@ -843,10 +845,10 @@ label i.icon.ion-search {
 		}
 
 		.item {
-			border-top:0;
-			border-left: 1px solid #E2DBDB;
-			border-right: 1px solid #E2DBDB;
+			border:0;
 			boder-radius:30px; 
+			background-color:transparent;
+			color:white;
 			&.item-radio .radio-content {
 				.item-content {
 					padding: 12px 45px 12px 10px;
@@ -858,19 +860,20 @@ label i.icon.ion-search {
 			}
 			&.item-select:after{
 				right: 10px; 
-				color: white;
+
 
 			}
 			&.item-input {
 				padding: 3px 0;
 			}
 			&:last-child {
-				border-bottom: 1px solid rgb(221, 221, 221);
+	
 			}
 		}
 
 	 	.form-group{
 			padding: 0 10px; 
+			color:white;
 		}
 	}
 }
