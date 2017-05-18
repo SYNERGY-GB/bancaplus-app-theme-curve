@@ -19,7 +19,7 @@ The generator will create all files and install the depedencies you need to run 
 ![alt text](http://blog.synergy-gb.com/assets/img/temas/tema3_curve.png)
 
 
-There are other themes available to apply to Banca+ Movil:
+There are other themes available to apply to Banca+ Móvil:
 * Original
 * Flat
 * Transparent
