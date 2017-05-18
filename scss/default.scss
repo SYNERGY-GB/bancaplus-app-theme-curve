@@ -137,11 +137,9 @@ h3.sectionTitle {
 
 //Side Menu
 
-.menu {
-	background:$menu-background-color;
-}
 
 ion-side-menu {
+	background:$menu-background-color;
 	
 	.bar.bar-header {
 		background-color: $menu-internal-header-color;
@@ -215,6 +213,7 @@ aboutMain{
 
 .row {
 	padding:10px; 
+	border:0;
 	p, h4, h6 {
 		margin-bottom:0;
 		margin-top:0; 
@@ -319,6 +318,8 @@ aboutMain{
 	}
 	&.item-select {
 		height: 40px;
+		border-radius:30px;
+		border: 0px;
 		select {
 			background-color:transparent; 
 			max-width: 100%; 
@@ -352,12 +353,23 @@ aboutMain{
   padding-bottom: 5px;
 }
 
+.input{
+	border:0;
+	border-radius:0px !important;
+}
+
+.no-border{
+	border:0 !important;
+	background-color:transparent;
+}
+
 .app-input  {
 	margin-top:20px;
 	margin-bottom:20px;
     width:80%;
     height:90%;
- 	border: 2px solid white; 
+ 	//border: 2px solid white; 
+ 	border-bottom:1px solid white;
 	background-color:$app-default-button-color; 
 	border-radius: $button-round-corner; 
 	p {
@@ -824,12 +836,14 @@ label i.icon.ion-search {
 		}
 
 		select {
-			color: $text-color; 
+			color: $app-default-font-color;
 			-webkit-appearance: none; 
 		}
 
 		label.input-select, select, .item.item-select {
 			color: $app-default-font-color; 
+			background-color:transparent;
+			border:0px;
 		}
 
 		input[type="text"]::-webkit-input-placeholder {
@@ -850,16 +864,20 @@ label i.icon.ion-search {
 			background-color:transparent;
 			color:white;
 			&.item-radio .radio-content {
+				background-color:transparent;
 				.item-content {
+					background-color:transparent;
 					padding: 12px 45px 12px 10px;
-					margin-left:10%;
+					margin-left:0%;
 				}
 				.radio-icon {
     				padding: 6px 14px;
+    				color:white;
 				} 
 			}
 			&.item-select:after{
 				right: 10px; 
+				color:white;
 
 
 			}

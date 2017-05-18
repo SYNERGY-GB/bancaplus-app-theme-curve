@@ -21,13 +21,15 @@
                 <hr ng-if="hasImportantDates()">
                 <div class="row" ng-if="hasImportantDates()" ng-click="goToCalendar()">
                     <div class="col col-10 col-center" id="balanceLabel">
-                        <i class="icon ion-calendar"></i>
+                        <i class="icon {{detail_calendar}}" ng-if='srcOk(customization.style.icons.detail_calendar)' ng-style="defaultColor"></i>
+                        <i class="icon ion-calendar" ng-if='!srcOk(customization.style.icons.detail_calendar)' ng-style="defaultColor"></i>
                     </div>
                     <div class="col col-center" id="balanceLabel">
                         <h4> {{'instrument_credit_card_dates' | translate }} </h4>
                     </div>
                     <div class="col col-10 col-center" id="balanceLabel">
-                        <i class="icon ion-forward"></i>
+                        <i class="icon {{detail_forward}}" ng-if='srcOk(customization.style.icons.detail_forward)' ng-style="defaultColor"></i>
+                        <i class="icon ion-forward" ng-if='!srcOk(customization.style.icons.detail_forward)' ng-style="defaultColor"></i>
                     </div>
                 </div>
             </div>

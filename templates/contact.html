@@ -1,30 +1,32 @@
-<ion-view mz-screen>
-    <ion-nav-title>{{ title | translate }}</ion-nav-title>
+<ion-view mz-screen ng-style="emptyB==false && defaultBackground">
+    <ion-nav-title ng-style="appHeaderText">{{ title | translate }}</ion-nav-title>
     <ion-nav-buttons side="left">
        	<button class="button button-icon button-clear ion-chevron-left" ng-click="goBack()">
       	</button>
     </ion-nav-buttons>
     <ion-content>
 	    <div class="mainContainer" ng-show="entered">
-			<h3 class="sectionTitle">{{'contact_details' | translate}}</h3>
-			<div class="secondaryContainer animated fadeIn">
+	    	<div class="sectionTitle" ng-style="sectionTitle">
+	    		<h3 ng-style="sectionTitleText">{{'contact_details' | translate}}</h3>
+	    	</div>
+			<div class="secondaryContainer animated fadeIn" ng-style="secondaryContainer">
 				<div  id="contact">
 					<mz-template bind-to="data.address" screen-params="params" params="extraParams"
-								 template-type="'@info'"></mz-template>
+									template-type="'@info'"></mz-template>
 					<hr/>
 					<mz-template bind-to="data.phone" screen-params="params" params="extraParams"
-								 template-type="'@number'"></mz-template>
+									template-type="'@number'"></mz-template>
 					<hr/>
 					<mz-template bind-to="data.phone2" screen-params="params" params="extraParams"
-								 template-type="'@number'"></mz-template>
+									template-type="'@number'"></mz-template>
 					<hr/>
 					<mz-template bind-to="data.hours" screen-params="params" params="extraParams"
-								 template-type="'@info'"></mz-template>
+									template-type="'@info'"></mz-template>
 				</div>
 			</div>
 
-			<h3  class="sectionTitle">{{'contact_social_networks' | translate}}</h3>
-			<div class="secondaryContainer animated fadeIn social">
+			<h3  class="sectionTitle" ng-style="sectionTitle">{{'contact_social_networks' | translate}}</h3>
+			<div class="secondaryContainer animated fadeIn social"  ng-style="sectionTitleText">
 				<mz-template bind-to="data.social1" screen-params="params" params="extraParams"
 							 template-type="'@info'"></mz-template>
 				<hr/>

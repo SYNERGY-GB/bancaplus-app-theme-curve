@@ -1,16 +1,16 @@
 .appMenu .p2pAffiliate {
-
+	
 	background: url($default-background) no-repeat center;
 	background-size: 105%;
 
 	.item-icon-left .row, .item-icon-left .col, .item-checkbox .row, .item-checkbox .col,
 	.radio-content .row, .radio-content .col{
-		padding: 200px;
+		padding: 0;
 	}
 
 	.app-input.item-input, input[disabled] {
-		background-color: red;
 		height: $input-height;
+		border-radius: 0;  
 	}
 
 }
