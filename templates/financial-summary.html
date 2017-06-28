@@ -15,8 +15,8 @@
 			<div class="sectionTitle row" ng-style="sectionTitle">
 				<img class="col-10 col-center" ng-src="{{params.sectionIcon}}"/>
 				<h3 class="col-center" ng-style="sectionTitleText"> {{::section.displayName}} </h3>
-				<h3 ng-if="section.total.displayAmount !== undefined" class="totalAmount" ng-style="totalAmount"> {{section.total.displayAmount}} </h3>
-				<h3 ng-if="section.total.displayAmount == undefined && !(section.id == 'creditCards') && !(section.id == 'credits')" class="totalAmount" ng-style="totalAmount"> {{section.data[0].available[0].displayAmount}} </h3>
+				<!--3 ng-if="section.total.displayAmount !== undefined" class="totalAmount" ng-style="totalAmount"> {{section.total.displayAmount}} </h3>
+				<h3 ng-if="section.total.displayAmount == undefined && !(section.id == 'creditCards') && !(section.id == 'credits')" class="totalAmount" ng-style="totalAmount"> {{section.data[0].available[0].displayAmount}} </h3>-->
 			</div>
 			<div class="secondaryContainer" ng-style="secondaryContainer">
 				<!-- instrument -->
